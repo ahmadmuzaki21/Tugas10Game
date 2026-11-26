@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vmc6r2vlcfek"]
+
+[ext_resource type="Script" uid="uid://cp50xjx2r5nc7" path="res://scripts/pemain_atas.gd" id="1_nouhr"]
+[ext_resource type="Texture2D" uid="uid://jv7c2kpamukw" path="res://assets/pemain.png" id="2_eq8km"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhs7g"]
+radius = 24.0
+
+[node name="PemainAtas" type="CharacterBody2D" unique_id=589588002]
+motion_mode = 1
+script = ExtResource("1_nouhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1790067968]
+texture = ExtResource("2_eq8km")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1125674604]
+shape = SubResource("CircleShape2D_bhs7g")
