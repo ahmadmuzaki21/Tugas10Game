@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://btl6xtvhpn88b"]
+
+[ext_resource type="Script" uid="uid://p4f40pqxyk65" path="res://scripts/hud.gd" id="1_ahhtf"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1515325089]
+script = ExtResource("1_ahhtf")
+
+[node name="SkorLabel" type="Label" parent="." unique_id=628244794]
+unique_name_in_owner = true
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 77.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 32
+text = "Koin: 0"

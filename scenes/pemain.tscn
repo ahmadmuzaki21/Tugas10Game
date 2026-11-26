@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://gndlioabrpjj"]
+
+[ext_resource type="Script" uid="uid://kootouf578pf" path="res://scripts/pemain.gd" id="1_26toh"]
+[ext_resource type="Texture2D" uid="uid://jv7c2kpamukw" path="res://assets/pemain.png" id="1_q65nn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26toh"]
+radius = 24.0
+height = 64.0
+
+[node name="Pemain" type="CharacterBody2D" unique_id=1396165144]
+collision_layer = 2
+script = ExtResource("1_26toh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303235889]
+texture = ExtResource("1_q65nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132710007]
+shape = SubResource("CapsuleShape2D_26toh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1509929166]
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 720
+position_smoothing_enabled = true

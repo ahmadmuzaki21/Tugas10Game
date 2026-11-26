@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://gkpt6kxljr2d"]
+
+[ext_resource type="PackedScene" uid="uid://bwv703ddmewa0" path="res://scenes/platfrom_1.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://gndlioabrpjj" path="res://scenes/pemain.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://c8r63ysq0rdg1" path="res://scenes/koin.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://btl6xtvhpn88b" path="res://scenes/hud.tscn" id="4_tbgi4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(1600, 80)
+
+[node name="Main" type="Node2D" unique_id=1286026643]
+
+[node name="Dunia" type="Node2D" parent="." unique_id=321119327]
+
+[node name="Lantai" type="StaticBody2D" parent="Dunia" unique_id=85917245]
+position = Vector2(800, 680)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dunia/Lantai" unique_id=1058554351]
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="ColorRect" type="ColorRect" parent="Dunia/Lantai" unique_id=1105078948]
+offset_left = -800.0
+offset_top = -40.0
+offset_right = 800.0
+offset_bottom = 40.0
+color = Color(0.6310349, 0.631035, 0.6310349, 1)
+
+[node name="Platfrom1" parent="Dunia" unique_id=1236778004 instance=ExtResource("1_0wfyh")]
+position = Vector2(600, 520)
+
+[node name="Platfrom2" parent="Dunia" unique_id=1553305076 instance=ExtResource("1_0wfyh")]
+position = Vector2(1000, 400)
+
+[node name="Koin" type="Node2D" parent="." unique_id=689461195]
+
+[node name="Koin1" parent="Koin" unique_id=1019905670 instance=ExtResource("3_jyhfs")]
+position = Vector2(350, 600)
+
+[node name="Koin2" parent="Koin" unique_id=266551526 instance=ExtResource("3_jyhfs")]
+position = Vector2(550, 470)
+
+[node name="Koin3" parent="Koin" unique_id=1267390912 instance=ExtResource("3_jyhfs")]
+position = Vector2(950, 350)
+
+[node name="Pemain" parent="." unique_id=1396165144 instance=ExtResource("1_o5qli")]
+position = Vector2(200, 580)
+
+[node name="HUD" parent="." unique_id=1515325089 instance=ExtResource("4_tbgi4")]
